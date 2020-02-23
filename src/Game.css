@@ -1,0 +1,138 @@
+.title {
+  text-align: center;
+  font-size: calc(1.5vw + 19.2px);
+  margin-bottom: 10px;
+}
+
+.wrapper {
+  width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: calc(0.75vw + 15.6px);
+  display: flex;
+  justify-content: space-around;
+}
+
+.player {
+  width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: calc(0.75vw + 15.6px);
+  margin-bottom: 10px;
+}
+
+.backStep {
+  cursor: pointer;
+  color: #B4A582;
+}
+
+.backStep:hover {
+  color: #c2b28c;
+}
+
+.resetGame {
+  cursor: pointer;
+  color: #1B9AF7;
+}
+
+.resetGame:hover {
+  color: #49a9ee;
+}
+
+.board {
+  max-width: 720px;
+  height: 720px;
+  margin: 0 auto;
+}
+
+.boardRow {
+  height: 40px;
+}
+
+.btn {
+  background-color: #B1B479;
+  cursor: pointer;
+}
+
+.boardLine {
+  display: inline-block;
+  width: calc(100%*5/90);
+  height: 40px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.boardLine::before {
+  content:'';
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+  background: black;
+}
+
+.boardLine::after {
+  content:'';
+  position: absolute;
+  left: 50%;
+  width: 1px;
+  height: 100%;
+  background: black;
+}
+
+.boardLine:first-child::before {
+  left: 50%
+}
+
+.boardLine:last-child::before {
+  right: 50%;
+}
+
+.boardRow:first-child .boardLine::after {
+  top: 50%;
+}
+
+.boardRow:last-child .boardLine::after {
+  bottom: 50%;
+}
+
+.piece {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+
+.black::before {
+  content: "";
+  display: block;
+  background: black;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.white::before {
+  content: "";
+  display: block;
+  background: white;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+@media screen and (max-width: 720px) {
+  .board {
+    width: 90%;
+    height: 90%;
+  }
+  .boardLine {
+    height: 25px;
+  }
+  .boardRow {
+    height: 25px;
+  }
+}

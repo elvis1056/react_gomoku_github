@@ -1,5 +1,6 @@
 {
   "name": "gomoku",
+  "homepage": "http://elvis.com.tw/gomoku/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
